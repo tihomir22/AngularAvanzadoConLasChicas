@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "soyJonnyYMeGustaElSugar": {
+      "projectType": "library",
+      "root": "projects/soy-jonny-yme-gusta-el-sugar",
+      "sourceRoot": "projects/soy-jonny-yme-gusta-el-sugar/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/soy-jonny-yme-gusta-el-sugar/tsconfig.lib.json",
+            "project": "projects/soy-jonny-yme-gusta-el-sugar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/soy-jonny-yme-gusta-el-sugar/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/soy-jonny-yme-gusta-el-sugar/src/test.ts",
+            "tsConfig": "projects/soy-jonny-yme-gusta-el-sugar/tsconfig.spec.json",
+            "karmaConfig": "projects/soy-jonny-yme-gusta-el-sugar/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/soy-jonny-yme-gusta-el-sugar/tsconfig.lib.json",
+              "projects/soy-jonny-yme-gusta-el-sugar/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "testingConLasChicas"
 }

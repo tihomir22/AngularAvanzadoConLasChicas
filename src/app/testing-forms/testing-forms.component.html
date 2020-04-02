@@ -1,0 +1,26 @@
+<div [formGroup]="formGroupVar">
+  <input
+    type="text"
+    name="Nombre"
+    formControlName="nombre"
+    [placeholder]="placeholderEjemplo"
+  />
+  <input type="text" name="Nombre" formControlName="apellido" />
+  <input type="text" name="Nombre" formControlName="contrasenya" />
+  <input type="button" value="Submit" (click)="submiteameEstaChaval()" />
+</div>
+
+<ng-container *ngIf="formGroupVar.value.nombre == 'abrir'; else elseTemplate">
+  <div
+    [ngClass]="{
+      claseMagicaRoja: formGroupVar.value.nombre == 'dembow',
+      claseMagicaVerde: formGroupVar.value.nombre != 'dembow'
+    }"
+    [ngStyle]="{
+      width: formGroupVar.value.nombre == 'dembow' ? '1000px' : '200px'
+    }"
+  ></div>
+</ng-container>
+<ng-template #elseTemplate> <h1>Papi, escribe abrir ahaa</h1> </ng-template>
+
+

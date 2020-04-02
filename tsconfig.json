@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "soy-jonny-yme-gusta-el-sugar": [
+        "dist/soy-jonny-yme-gusta-el-sugar/soy-jonny-yme-gusta-el-sugar",
+        "dist/soy-jonny-yme-gusta-el-sugar"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

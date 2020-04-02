@@ -1,0 +1,14 @@
+.claseMagica-base {
+  height: 200px;
+  width: 200px;
+}
+
+.claseMagicaRoja {
+  @extend .claseMagica-base;
+  background-color: red;
+}
+
+.claseMagicaVerde {
+  @extend .claseMagica-base;
+  background-color: green;
+}
